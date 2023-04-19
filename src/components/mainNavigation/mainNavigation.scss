@@ -36,13 +36,14 @@
   }
 
   .mobile-menu-navbar {
-    background-color: #fff;
+    background-color: #000;
     padding: 5rem 10rem;
     border-radius: 5px;
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 80%;
     right: 30px;
+    animation: scaleUp 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
   }
 
   .navigation {
@@ -65,6 +66,11 @@
       transition: all 0.3s;
 
       position: relative;
+
+      @media only screen and (max-width: 800px) {
+        color: #fff;
+        font-weight: bold;
+      }
     }
 
     &__link:hover,
@@ -79,6 +85,10 @@
     &__link.active,
     &__link.active {
       color: #000;
+
+      @media only screen and (max-width: 800px) {
+        color: #fff;
+      }
 
       &::before {
         width: 100%;
@@ -96,5 +106,15 @@
       transition: all 0.3s;
       background-image: $gradient-link;
     }
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(0.6);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }

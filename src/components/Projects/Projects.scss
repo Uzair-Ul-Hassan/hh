@@ -1,0 +1,45 @@
+@import "../../variables.scss";
+
+.projects {
+  padding-top: 4rem;
+
+  &__project {
+    display: flex;
+    gap: 4rem;
+    color: $color-text;
+
+    &:not(:last-child) {
+      margin-bottom: 16rem;
+    }
+
+    h2 {
+      font-size: 2.8rem;
+      line-height: 1.6;
+      margin-bottom: 3rem;
+    }
+  }
+
+  &__project__content {
+    flex: 0 1 50%;
+  }
+
+  &__project__image {
+    flex: 0 1 50%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+
+  .director {
+    display: block;
+    margin-top: 3rem;
+    font-size: 1.6rem;
+    color: #000;
+    font-weight: bold;
+
+    font-style: italic;
+  }
+}

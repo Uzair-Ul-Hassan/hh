@@ -1,0 +1,115 @@
+@import "../../variables.scss";
+
+.footer {
+  background: $color-footer;
+  padding: 6rem 8rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  @media only screen and (max-width: 1000px) {
+    flex-direction: column;
+    gap: 4rem;
+  }
+
+  &__social {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo-container {
+    @media only screen and (max-width: 1000px) {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  &__social-links__list {
+    list-style: none;
+
+    display: flex;
+    gap: 2.5rem;
+
+    &-item {
+      cursor: pointer;
+    }
+  }
+
+  &__navigation {
+    flex: 0 1 35%;
+
+    @media only screen and (max-width: 1000px) {
+      align-self: center;
+      transform: translateX(15%);
+
+      @media only screen and (max-width: 800px) {
+        transform: translateX(7%);
+      }
+    }
+  }
+
+  &__navigation__list {
+    list-style: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    &-item {
+      width: 50%;
+
+      &:not(:last-child) {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  &__navigation__link:link,
+  &__navigation__link:visited {
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+  }
+
+  &__navigation__link:hover,
+  &__navigation__link:active {
+    &::before {
+      width: 100%;
+    }
+  }
+
+  &__navigation__link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    height: 4px;
+    width: 0;
+    transition: all 0.3s;
+    background-image: $gradient-link;
+  }
+
+  .copyright {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @media only screen and (max-width: 1000px) {
+      align-items: center;
+
+      & button {
+        margin-bottom: 3rem;
+      }
+    }
+
+    &__text {
+      font-size: 1.4rem;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+@import "../../variables.scss";
+
+.smart-home {
+  padding: 0 4rem;
+  overflow: hidden;
+
+  &__heading {
+    margin-bottom: 5rem;
+    text-align: center;
+  }
+
+  &__content {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 15rem;
+
+    @media only screen and (max-width: 1000px) {
+      flex-direction: column;
+      gap: 5rem;
+    }
+  }
+
+  &__text {
+    color: $color-text;
+    width: 60%;
+
+    @media only screen and (max-width: 1000px) {
+      text-align: center;
+      width: 100%;
+    }
+
+    & p:first-child {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__image {
+    @media only screen and (max-width: 1000px) {
+      order: -1;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+  }
+}

@@ -1,0 +1,100 @@
+@import "../../variables.scss";
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+
+  position: relative;
+
+  &__logo-container {
+    img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  & .btn {
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .navbar-container {
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+
+  .mobile-menu-icon {
+    display: none;
+
+    @media only screen and (max-width: 800px) {
+      display: block;
+    }
+  }
+
+  .mobile-menu-navbar {
+    background-color: #fff;
+    padding: 5rem 10rem;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 80%;
+    right: 30px;
+  }
+
+  .navigation {
+    &__list {
+      list-style: none;
+
+      display: flex;
+      gap: 6rem;
+
+      @media only screen and (max-width: 800px) {
+        flex-direction: column;
+        gap: 3rem;
+      }
+    }
+
+    &__link:link,
+    &__link:visited {
+      text-decoration: none;
+      color: #999;
+      transition: all 0.3s;
+
+      position: relative;
+    }
+
+    &__link:hover,
+    &__link:active {
+      color: #000;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &__link.active,
+    &__link.active {
+      color: #000;
+
+      &::before {
+        width: 100%;
+      }
+    }
+
+    &__link::before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      height: 4px;
+      width: 0;
+      transition: all 0.3s;
+      background-image: $gradient-link;
+    }
+  }
+}

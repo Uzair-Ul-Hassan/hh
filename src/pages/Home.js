@@ -195,7 +195,7 @@ const HomePage = () => {
         initial={{ transform: "translateY(20%)", opacity: 0 }}
         whileInView={{ transform: "translateY(0)", opacity: 1 }}
         transition={{ duration: 0.6 }}
-        viewport={{ once: true, margin: "0px 0px -100px 0px" }}
+        viewport={{ once: true, margin: "0px 0px 0px 0px" }}
       >
         <img
           src={OfferImage}

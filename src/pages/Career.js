@@ -6,7 +6,7 @@ import CareerImage from "../assets/career.png";
 const Career = () => {
   return (
     <motion.section
-      className="container mb-48 px-12 mt-20"
+      className="container mb-48 px-12 mt-20 -z-1"
       initial={{ transform: "translateY(30%)", opacity: 0 }}
       whileInView={{ transform: "translateY(0)", opacity: 1 }}
       transition={{ duration: 0.6 }}

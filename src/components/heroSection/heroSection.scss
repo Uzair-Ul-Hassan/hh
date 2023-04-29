@@ -1,85 +1,26 @@
 @import "../../variables.scss";
 
 .hero-section {
-  margin-bottom: 30rem;
+  display: flex;
+  gap: 4rem;
 
-  &__bg-video-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
+  padding: 6rem 3rem;
 
-    opacity: 0.2;
-  }
+  &__image {
+    flex: 0 1 50%;
 
-  &__bg-video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  &__heading {
-    margin: 0 5rem 5rem;
-    text-align: center;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
   }
 
   &__content {
-    height: 55vh;
+    flex: 0 1 50%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-
-  &__info {
-    display: flex;
-    align-items: flex-start;
-    margin: 0 4rem;
-
-    @media only screen and (max-width: 800px) {
-      flex-direction: column;
-      align-items: center;
-      gap: 4rem;
-    }
-  }
-  &__location {
-    display: flex;
-    align-items: flex-start;
-
-    &-icon {
-      margin-right: 1.5rem;
-    }
-
-    &-text {
-      color: $color-text;
-      width: 60%;
-
-      @media only screen and (max-width: 800px) {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  }
-
-  &__contact {
-    display: flex;
-    align-items: center;
-
-    margin-left: -15rem;
-
-    @media only screen and (max-width: 800px) {
-      margin: 0;
-    }
-
-    &-icon {
-      margin-right: 1.5rem;
-    }
-
-    &-text {
-      color: $color-text;
+    p:first-child {
+      margin-bottom: 2rem;
     }
   }
 }

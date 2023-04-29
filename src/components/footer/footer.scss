@@ -20,6 +20,10 @@
   }
 
   &__logo-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
     @media only screen and (max-width: 1000px) {
       margin-bottom: 3rem;
     }
@@ -27,7 +31,16 @@
     img {
       width: 7rem;
       height: 7rem;
+      // margin-bottom: 4rem;
     }
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+
+    margin-bottom: 4rem;
   }
 
   &__social-links__list {
@@ -110,6 +123,35 @@
 
     &__text {
       font-size: 1.4rem;
+    }
+  }
+
+  .location {
+    text-align: center;
+
+    display: flex;
+    align-items: flex-start;
+
+    &-name {
+      display: block;
+      line-height: 1.4;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    &-name-engg {
+      font-size: 1.6rem;
+    }
+
+    &-icon {
+      margin-right: 1rem;
+    }
+
+    &-text {
+      display: inline-block;
+      font-size: 1.6rem;
+      color: #aaa;
+      margin-bottom: 4rem;
     }
   }
 }

@@ -8,7 +8,7 @@ const SmartHome = () => {
   return (
     <section className="smart-home container">
       <motion.h2
-        className="secondary-heading smart-home__heading"
+        className="secondary-heading smart-home__heading med:text-[4.6rem] text-[3.6rem]"
         initial={{ transform: "translateX(-100%)", opacity: 0 }}
         whileInView={{ transform: "translateX(0)", opacity: 1 }}
         transition={{ duration: 0.6 }}

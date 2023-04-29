@@ -31,10 +31,6 @@
     transition: all 0.3s;
     overflow: hidden;
     border-radius: 10px;
-
-    &:hover {
-      transform: translateY(-10px);
-    }
   }
 
   &__card__img {

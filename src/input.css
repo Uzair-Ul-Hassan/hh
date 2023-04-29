@@ -1,0 +1,11 @@
+/* @tailwind base; */
+/* @tailwind components; */
+@tailwind utilities;
+
+.offer__heading {
+  transform: translateX(-50%);
+}
+
+.offer-cards-container {
+  transform: translateY(-180px);
+}

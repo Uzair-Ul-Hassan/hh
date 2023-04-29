@@ -9,6 +9,9 @@ import ServicesPage from "./pages/Services";
 import ErrorPage from "./pages/Error";
 
 import "./App.scss";
+import "./input.css";
+import Career from "./pages/Career";
+import Smart from "./pages/Smart";
 
 const router = createBrowserRouter([
   {
@@ -31,6 +34,14 @@ const router = createBrowserRouter([
       {
         path: "services",
         element: <ServicesPage />,
+      },
+      {
+        path: "career",
+        element: <Career />,
+      },
+      {
+        path: "smart-home",
+        element: <Smart />,
       },
     ],
   },

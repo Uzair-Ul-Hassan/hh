@@ -1,41 +1,33 @@
 import React from "react";
-import { GoLocation } from "react-icons/go";
-import { BsFillTelephoneFill } from "react-icons/bs";
 
-import videoMP4 from "../../assets/video.mp4";
 import "./heroSection.scss";
+import MEP from "../../assets/MEP.png";
 
 const Header = () => {
-  const style = { color: "#000", fontSize: "3rem" };
-
   return (
-    <section className="hero-section">
-      <div className="hero-section__bg-video-container">
-        <video className="hero-section__bg-video" autoPlay muted loop>
-          <source src={videoMP4} type="video/mp4"></source>
-          Your browser is not supported!
-        </video>
+    <section className="hero-section container med:flex-row flex-col">
+      <div className="hero-section__image">
+        <img src={MEP} alt="mep" />
       </div>
-
       <div className="hero-section__content">
-        <h1 className="primary-heading hero-section__heading">
-          H&H Power Engineering Associates
-        </h1>
-        <address className="hero-section__info">
-          <p className="hero-section__location">
-            <GoLocation className="hero-section__location-icon" style={style} />
-            <span className="hero-section__location-text">
-              201 Second Floor Near St.Pauls School Basheer Bagh Hyderabad-01
-            </span>
-          </p>
-          <p className="hero-section__contact">
-            <BsFillTelephoneFill
-              className="hero-section__contact-icon"
-              style={style}
-            />
-            <span className="hero-section__contact-text">+91 90323 72607</span>
-          </p>
-        </address>
+        <p>
+          As a MEP Contractor, H&H Power is comprised of professionals with
+          comprehensive experience specialized in MEP installation, operations
+          and maintenance. H&H Power renders MEP focused services to various
+          sectors like{" "}
+          <span className="highlight">
+            Health care, Pharma Industries, Education, Banks, Sports club, Real
+            estate, shopping malls etc.,
+          </span>{" "}
+          by efficiently maintaining their facilities. We have technical experts
+          who are most experienced in similar industries.
+        </p>
+        <p>
+          Our aim is to provide high standards of quality engineering services
+          as the best MEP Contractors. Electrical, Low Current, Drainage, Water
+          Supply, Fire Alarm, Fire Fighting, LPG, and HVAC for Residential &
+          Industrial buildings.
+        </p>
       </div>
     </section>
   );

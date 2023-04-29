@@ -1,11 +1,16 @@
 import React from "react";
 
 import MEP from "../../assets/MEP.png";
+import ElectricalService from "../../assets/electricalservice.png";
+import LowVoltage from "../../assets/lowvoltageservice.png";
+import HVACImage from "../../assets/hvac.png";
+import PlumbingImage from "../../assets/plumbingservice.png";
+import FireImage from "../../assets/fireservice.png";
 import "./services.scss";
 
 const Services = () => {
   return (
-    <section className="container MEP">
+    <section className="container MEP mt-16">
       <h2 className="secondary-heading MEP__heading">MEP Services</h2>
       <div className="MEP-content">
         <p className="MEP-content__text">
@@ -50,116 +55,158 @@ const Services = () => {
           related to electrical includes DB dressing, load schedule preparations
           and the drawings for authority approvals.
         </p>
-        <ul className="list">
-          <li> H.V. & L.V. Transformers</li>
-          <li>Switchgears</li>
-          <li>Laying & Termination of H.V. Cables</li>
-          <li>Testing of Transformer, Relays & Cables</li>
-          <li>Digital Fault monitor & recorders etc.</li>
-          <li>
-            Small power and lighting works for Industrial and Commercial
-            buildings
-          </li>
-          <li>
-            Internal and External lighting Plant lighting, Emergency lighting,
-            Energy management.
-          </li>
-        </ul>
+        <div className="flex gap-16 items-center med:flex-row flex-col">
+          <ul className="list flex-50 med:-order-1 order-2">
+            <li> H.V. & L.V. Transformers</li>
+            <li>Switchgears</li>
+            <li>Laying & Termination of H.V. Cables</li>
+            <li>Testing of Transformer, Relays & Cables</li>
+            <li>Digital Fault monitor & recorders etc.</li>
+            <li>
+              Small power and lighting works for Industrial and Commercial
+              buildings
+            </li>
+            <li>
+              Internal and External lighting Plant lighting, Emergency lighting,
+              Energy management.
+            </li>
+          </ul>
+          <div className="flex-50">
+            <img
+              src={ElectricalService}
+              alt="electrical-service"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
       <div className="MEP__low-voltage">
         <h3 className="tertiary-heading">
           Extra Low Voltage Engineering Services
         </h3>
-        <ul className="list">
-          <li>CCTV Systems </li>
-          <li>Access Control Systems </li>
-          <li>Intruder Alarm & Security Systems</li>
-          <li>TV Distribution Systems</li>
-          <li>Intercom Systems</li>
-          <li>PA/Speakers/Music Installation Systems</li>
-          <li>Car Park Management Systems</li>
-          <li>Home Automation Systems</li>
-          <li>IT Network & Telephony Systems</li>
-          <li>Building Management Systems (BMS) </li>
-        </ul>
+        <div className="flex gap-16 items-center justify-center  med:flex-row flex-col">
+          <ul className="list flex-50">
+            <li>CCTV Systems </li>
+            <li>Access Control Systems </li>
+            <li>Intruder Alarm & Security Systems</li>
+            <li>TV Distribution Systems</li>
+            <li>Intercom Systems</li>
+            <li>PA/Speakers/Music Installation Systems</li>
+            <li>Car Park Management Systems</li>
+            <li>Home Automation Systems</li>
+            <li>IT Network & Telephony Systems</li>
+            <li>Building Management Systems (BMS) </li>
+          </ul>
+
+          <div className="flex-50">
+            <img
+              src={LowVoltage}
+              alt="low-voltage"
+              className="w-full h-full object-cover"
+            />
+          </div>
+        </div>
       </div>
       <div className="MEP__hvac">
         <h3 className="tertiary-heading">HVAC</h3>
-        <p>
-          Our Air-Conditioning Team works for multiple applications viz. comfort
-          cooling systems, process cooling, clean rooms, Labs, Data Centre’s,
-          General & basement ventilation, exhaust, pressurization of staircase,
-          etc.
-        </p>
-        <p>
-          H&H Power Team, with its dedicated team experienced in Planning and
-          Project Execution offers complete solution to every single client
-          across the Nation. Our infrastructure along with Technical Capability,
-          meet any challenges and thereby provide seamless services and
-          sustainable solutions. We provide complete HVAC Solutions for various
-          Industries: Residential, Commercial, Institutional, Medical, IT &
-          Non-IT, Industrial projects, Health Sector, Corporates, Retail and
-          Hospitality Industries.
-        </p>
-        <ul className="list">
-           <li>HVAC – Heating, Ventilation & Air Conditioning </li>
-          <li>
-            Air Conditioning System like chillers, Fan Coil Unit, Handling Units
-            & Package Units
-          </li>
-          <li>
-            Ducted Split Units and Decorative Split Units for Residential &
-            Commercial Buildings and Hospitals & Shopping Malls
-          </li>
-        </ul>
+        <div className="flex gap-16 items-center  med:flex-row flex-col">
+          <div className="flex-50">
+            <p>
+              Our Air-Conditioning Team works for multiple applications viz.
+              comfort cooling systems, process cooling, clean rooms, Labs, Data
+              Centre’s, General & basement ventilation, exhaust, pressurization
+              of staircase, etc.
+            </p>
+            <p>
+              H&H Power Team, with its dedicated team experienced in Planning
+              and Project Execution offers complete solution to every single
+              client across the Nation. Our infrastructure along with Technical
+              Capability, meet any challenges and thereby provide seamless
+              services and sustainable solutions. We provide complete HVAC
+              Solutions for various Industries: Residential, Commercial,
+              Institutional, Medical, IT & Non-IT, Industrial projects, Health
+              Sector, Corporates, Retail and Hospitality Industries.
+            </p>
+            <ul className="list">
+               <li>HVAC – Heating, Ventilation & Air Conditioning </li>
+              <li>
+                Air Conditioning System like chillers, Fan Coil Unit, Handling
+                Units & Package Units
+              </li>
+              <li>
+                Ducted Split Units and Decorative Split Units for Residential &
+                Commercial Buildings and Hospitals & Shopping Malls
+              </li>
+            </ul>
+          </div>
+          <div className="flex-50">
+            <img
+              src={HVACImage}
+              alt="hvac"
+              className="w-full h-2/3 object-cover"
+            />
+          </div>
+        </div>
       </div>
       <div className="MEP__plumbing">
         <h3 className="tertiary-heading">Plumbing Works</h3>
-        <p>
-          Our experienced & skilled plumbing team provides the cost-effective
-          solutions for water & drainage systems according to the govt.
-          authority requirements, building requirements and the plumbing
-          standards.
-        </p>
-        <ul className="list">
-          <li>Drinking water supplies</li>
-          <li>Rainwater system</li>
-          <li>Drainage Sanitary Appliances</li>
-          <li>Surface water Collection Systems</li>
-          <li>Irrigation Systems</li>
-        </ul>
+        <div className="flex gap-16 items-center  med:flex-row flex-col">
+          <div className="flex-50">
+            <p>
+              Our experienced & skilled plumbing team provides the
+              cost-effective solutions for water & drainage systems according to
+              the govt. authority requirements, building requirements and the
+              plumbing standards.
+            </p>
+            <ul className="list">
+              <li>Drinking water supplies</li>
+              <li>Rainwater system</li>
+              <li>Drainage Sanitary Appliances</li>
+              <li>Surface water Collection Systems</li>
+              <li>Irrigation Systems</li>
+            </ul>
+          </div>
+          <div className="flex-50">
+            <img
+              src={PlumbingImage}
+              alt="plumbing"
+              className="w-full h-2/3 object-cover"
+            />
+          </div>
+        </div>
       </div>
       <div className="MEP__firefighting">
-        <h3 className="tertiary-heading">Fire Fighting & Plumbing (PHE) </h3>
-        <p>
-          The Fire Fighting team covers Fire hydrant and sprinkler systems, Wet
-          & Dry Riser systems, Gas Suppression Systems, Fire extinguishers, Fire
-          alarm and Voice Evacuation Systems.{" "}
-        </p>
-        <p>
-          The very essential service in any type of building is the PHE. Our
-          expert team handles projects with Internal and external pipe lines,
-          drainage, water supply, RWH, RO and STP.{" "}
-        </p>
-        <p>
-          The combination of Firefighting & PHE services enables us to provide
-          the greatest advantage to all our customers as a single source and
-          single point of contact for all their critical needs.{" "}
-        </p>
-        <p>
-          We know where to plug in the system and thereby providing you the
-          comfort working & Living Environment.
-        </p>
-        <ul className="list">
-          <li>Fire alarm system</li>
-          <li>Fire hose reel system</li>
-          <li>Fire pump sets</li>
-          <li>Fire extinguishers</li>
-          <li>(DCP & CO2)</li>
-          <li>Sprinkler system</li>
-          <li>Dry/ wet riser valve system</li>
-          <li>Emergency lighting system</li>
-        </ul>
+        <h3 className="tertiary-heading">Fire Fighting</h3>
+        <div className="flex gap-16  med:flex-row flex-col">
+          <div className="flex-50">
+            <p>
+              The Fire Fighting team covers Fire hydrant and sprinkler systems,
+              Wet & Dry Riser systems, Gas Suppression Systems, Fire
+              extinguishers, Fire alarm and Voice Evacuation Systems.{" "}
+            </p>
+            <p>
+              We know where to plug in the system and thereby providing you the
+              comfort working & Living Environment.
+            </p>
+            <ul className="list">
+              <li>Fire alarm system</li>
+              <li>Fire hose reel system</li>
+              <li>Fire pump sets</li>
+              <li>Fire extinguishers</li>
+              <li>(DCP & CO2)</li>
+              <li>Sprinkler system</li>
+              <li>Dry/ wet riser valve system</li>
+              <li>Emergency lighting system</li>
+            </ul>
+          </div>
+          <div className="flex-50">
+            <img
+              src={FireImage}
+              alt="firefigting"
+              className="w-full h-2/3 object-cover"
+            />
+          </div>
+        </div>
       </div>
     </section>
   );

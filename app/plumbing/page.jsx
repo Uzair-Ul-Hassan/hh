@@ -1,6 +1,16 @@
 import { mepServices2 } from "@/constants";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Plumbing Services",
+  description: `Your home&apos;s plumbing system is an essential part of your daily
+  life. From providing clean water for drinking and bathing to
+  draining waste and sewage, your plumbing system works tirelessly
+  behind the scenes to keep your home comfortable and functional.
+  However, when plumbing problems arise, they can quickly disrupt your
+  routine and cause significant inconvenience.`,
+};
+
 const PlumbingPage = () => {
   return (
     <>

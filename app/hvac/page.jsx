@@ -1,6 +1,14 @@
 import { mepServices2 } from "@/constants";
 import Image from "next/image";
 
+export const metadata = {
+  title: "HVAC",
+  description: ` Our Air-Conditioning Team works for multiple applications viz.
+  comfort cooling systems, process cooling, clean rooms, Labs, Data
+  Centre&apos;s, General & basement ventilation, exhaust,
+  pressurization of staircase, etc.`,
+};
+
 const HvacPage = () => {
   return (
     <>

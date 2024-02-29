@@ -1,5 +1,13 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "MEP SERVICES",
+  description: ` Our Air-Conditioning Team works for multiple applications viz.
+  comfort cooling systems, process cooling, clean rooms, Labs, Data
+  Centre&apos;s, General & basement ventilation, exhaust,
+  pressurization of staircase, etc.`,
+};
+
 const MepPage = () => {
   return (
     <>
@@ -21,12 +29,61 @@ const MepPage = () => {
           M.E.P
         </h2>
 
-        <div className="relative w-full h-[600px] mb-28">
+        {/* <div className="relative w-full h-[600px] mb-28">
           <Image src="/mep1.png" alt="MEP 1" fill className="object-contain" />
         </div>
 
         <div className="relative w-full h-[600px] mb-28">
           <Image src="/mep2.png" alt="MEP 2" fill className="object-contain" />
+        </div> */}
+
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project1.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project2.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project3.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project4.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project5.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
+        </div>
+        <div className="relative w-full h-[600px] mb-28">
+          <Image
+            src="/project6.jpg"
+            alt="Project"
+            fill
+            className="object-contain"
+          />
         </div>
       </div>
     </>

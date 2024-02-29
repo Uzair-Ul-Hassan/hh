@@ -13,9 +13,25 @@ export const sendEmail = async (details) => {
   const mailOptions = {
     // from: `Mubashir Ul Hassan <${process.env.EMAIL_FROM}>`,
     from: `${process.env.EMAIL_FROM}`,
+    // to: "info.hnhpower@gmail.com",
     to: "uzairulhassan24@gmail.com",
-    subject: `Message from ${details.name}`,
-    text: details.description,
+    subject: `Enquiry regarding ${details.product}`,
+    html: `
+    <h2>Dear ${details.name},</h2>
+    <p>I hope this email finds you well. My name is ${
+      details.name
+    }, and I am writing to inquire about ${
+      details.product
+    }. I came accross H&H Power online and was impressed.</p>
+    <br/>
+    <p>I am particularly interested in learning more about: ${
+      details.description
+    }</p>
+    <br/>
+    ${details.phone ? `<p>My phone number is: ${details.phone}</p>` : ""}
+    <br/>
+    ${details.email ? `<p>My email is: ${details.email}</p>` : ""}
+    `,
   };
 
   await transporter.sendMail(mailOptions);

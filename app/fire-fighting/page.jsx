@@ -1,6 +1,15 @@
 import { IncludeServices } from "@/components/IncludeServices";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Fire Fighting Services",
+  description: `At H&H POWER, we&apos;re dedicated to ensuring the safety and security
+  of our communities through our comprehensive fire fighting services.
+  With a team of highly trained professionals and state-of-the-art
+  equipment, we are committed to preventing, managing, and extinguishing
+  fires to protect lives and property.`,
+};
+
 const FireFightingPage = () => {
   return (
     <>
@@ -38,7 +47,7 @@ const FireFightingPage = () => {
             <li>(DCP & CO2)</li>
             <li>Sprinkler system</li>
             <li>Dry/ wet riser valve system</li>
-            <li>Energency Lighting System</li>
+            <li>Emergency Lighting System</li>
           </ul>
         </div>
 

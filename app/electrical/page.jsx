@@ -1,6 +1,15 @@
 import { mepServices2 } from "@/constants";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Electrical Services",
+  description: `We are one of the leading electrical services providers in south
+  Asia, we believe in assisting our clients in designing,
+  coordinating, and executing projects varying in size and scope. H&H
+  Power takes pride in extending its in-house capabilities to the
+  electrification system domain as an elite Class I Contractor.`,
+};
+
 const ElectricalPage = () => {
   return (
     <>
@@ -21,7 +30,7 @@ const ElectricalPage = () => {
         <div className="text-[#4D5053] text-2xl leading-10 mb-24">
           <p className="mb-2">
             We are one of the leading electrical services providers in south
-            India, we believe in assisting our clients in designing,
+            Asia, we believe in assisting our clients in designing,
             coordinating, and executing projects varying in size and scope. H&H
             Power takes pride in extending its in-house capabilities to the
             electrification system domain as an elite Class I Contractor.

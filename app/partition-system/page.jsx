@@ -1,5 +1,17 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Partition System",
+  description: `H&H Power is very pleased to launch a new series of Wall
+  Partition System a Healthier Solution for Hospital Room
+  Partitions. Fabric curtain systems in healthcare facilities are
+  built to provide privacy to patients. If you need to segment
+  office space in your facility, wall off an area for better
+  environmental protection or divide plant space from floor to
+  ceiling, our wall partitioning systems are suitable for all
+  forms of partitioning.`,
+};
+
 const PartitionSystemPage = () => {
   return (
     <>
@@ -28,13 +40,13 @@ const PartitionSystemPage = () => {
           <div className="flex gap-10 justify-center">
             <div className="text-[#4D5053] text-xl flex-[0_0_50%] leading-10">
               <p>
-                South Star Engineering Solutions is very pleased to launch a new
-                series of Wall Partition System a Healthier Solution for
-                Hospital Room Partitions. Fabric curtain systems in healthcare
-                facilities are built to provide privacy to patients. If you need
-                to segment office space in your facility, wall off an area for
-                better environmental protection or divide plant space from floor
-                to ceiling, our wall partitioning systems are suitable for all
+                H&H Power is very pleased to launch a new series of Wall
+                Partition System a Healthier Solution for Hospital Room
+                Partitions. Fabric curtain systems in healthcare facilities are
+                built to provide privacy to patients. If you need to segment
+                office space in your facility, wall off an area for better
+                environmental protection or divide plant space from floor to
+                ceiling, our wall partitioning systems are suitable for all
                 forms of partitioning. In addition to effectively mediating the
                 acoustics between rooms and inside each of them, the partitions,
                 which are necessary for subdividing the space, must be
@@ -68,13 +80,13 @@ const PartitionSystemPage = () => {
             </div>
             <div className="text-[#4D5053] text-xl flex-[0_0_50%] leading-10">
               <p>
-                South Star Engineering Solutions is very pleased to launch a new
-                series of Wall Partition System a Healthier Solution for
-                Hospital Room Partitions. Fabric curtain systems in healthcare
-                facilities are built to provide privacy to patients. If you need
-                to segment office space in your facility, wall off an area for
-                better environmental protection or divide plant space from floor
-                to ceiling, our wall partitioning systems are suitable for all
+                H&H Power is very pleased to launch a new series of Wall
+                Partition System a Healthier Solution for Hospital Room
+                Partitions. Fabric curtain systems in healthcare facilities are
+                built to provide privacy to patients. If you need to segment
+                office space in your facility, wall off an area for better
+                environmental protection or divide plant space from floor to
+                ceiling, our wall partitioning systems are suitable for all
                 forms of partitioning. In addition to effectively mediating the
                 acoustics between rooms and inside each of them, the partitions,
                 which are necessary for subdividing the space, must be
@@ -84,7 +96,7 @@ const PartitionSystemPage = () => {
           </div>
         </section>
 
-        <section className="mb-24">
+        {/* <section className="mb-24">
           <h2 className="text-[#CDA274] text-5xl uppercase text-center mb-12">
             Doors and accessories
           </h2>
@@ -121,7 +133,7 @@ const PartitionSystemPage = () => {
               />
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="mb-24">
           <h2 className="text-[#CDA274] text-5xl uppercase text-center mb-12">

@@ -1,40 +1,13 @@
-"use client";
-
 import Image from "next/image";
-import { useState } from "react";
+import { Form } from "@/components/Form";
+
+export const metadata = {
+  title: "H&H Power",
+  description:
+    "H&H POWER IS AN ORGANIZATION WHICH DEAL WITH MEP WORK I.E HVAC,ELECTRICAL, CCTV, FIRE FIGHTING SYSTEM, BIOMETRIC, ACCESS CONTROL AND PUBLIC ADDRESS STSTEM AND PHE. AT H&H POWER, WE ARE MORE THAN JUST CONTRACTOR.",
+};
 
 const AboutPage = () => {
-  const [details, setDetails] = useState({
-    name: "",
-    email: "",
-    description: "",
-  });
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    if (!details.name || !details.email || !details.description) {
-      return;
-    }
-
-    const response = await fetch("/api/sendEmail", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(details),
-    });
-
-    const data = await response.json();
-
-    console.log(data);
-    setDetails({
-      name: "",
-      email: "",
-      description: "",
-    });
-  };
-
   return (
     <>
       <div className="relative w-full h-[360px] mb-28">
@@ -187,52 +160,7 @@ const AboutPage = () => {
         </div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto px-3 mb-28">
-        <h2 className="text-5xl font-bold text-balance text-center capitalize mb-20">
-          Creative project? Let&apos;s have <br />a productive talk.
-        </h2>
-
-        <form className="w-2/3 mx-auto">
-          <div className="flex flex-wrap gap-8 justify-center mb-16">
-            <input
-              className="border-b-2 border-b-slate-300 focus:outline-none focus:border-b-slate-900 w-[45%] placeholder:text-[#777] placeholder:font-medium text-xl px-2 py-4"
-              placeholder="Name"
-              value={details.name}
-              onChange={(e) => setDetails({ ...details, name: e.target.value })}
-            />
-            <input
-              className="border-b-2 border-b-slate-300 focus:outline-none focus:border-b-slate-900 w-[45%] placeholder:text-[#777] placeholder:font-medium text-xl px-2 py-4"
-              placeholder="Email"
-              value={details.email}
-              onChange={(e) =>
-                setDetails({ ...details, email: e.target.value })
-              }
-            />
-            <input
-              className="border-b-2 border-b-slate-300 focus:outline-none focus:border-b-slate-900 w-[93%] placeholder:text-[#777] placeholder:font-medium text-xl mt-10 px-2 py-4"
-              placeholder="Hello, I'm interested in..."
-              value={details.description}
-              onChange={(e) =>
-                setDetails({ ...details, description: e.target.value })
-              }
-            />
-          </div>
-          <div className="flex justify-center">
-            <button
-              className="focus:outline-none bg-[#000] rounded-xl px-12 py-5 text-white flex gap-3 items-center"
-              onClick={handleSubmit}
-            >
-              Send Now{" "}
-              <Image
-                src="/arrow-right.svg"
-                alt="arrow-right"
-                width={16}
-                height={16}
-              />
-            </button>
-          </div>
-        </form>
-      </div>
+      <Form />
     </>
   );
 };

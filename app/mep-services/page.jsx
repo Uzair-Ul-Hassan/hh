@@ -1,6 +1,16 @@
 import { mepServices2 } from "@/constants";
 import Image from "next/image";
 
+export const metadata = {
+  title: "MEP SERVICES",
+  description: `H&H Power renders MEP focused services to various sectors like
+  Education, Health care, Banks, Sports club, Real estate, Shopping
+  malls etc., by efficiently maintaining their facilities. We have
+  technical experts who are most experienced in similar industries.
+  Our aim is to provide high standards of quality engineering services
+  as the best MEP Contractors.`,
+};
+
 const MepServices = () => {
   return (
     <>

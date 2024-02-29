@@ -1,13 +1,51 @@
-import { followOur, howWeWork, industries } from "@/constants";
+"use client";
+
+import { motion } from "framer-motion";
+import {
+  clients,
+  followOur,
+  howWeWork,
+  industries,
+  sliderImages,
+} from "@/constants";
 import clsx from "clsx";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 const RootPage = () => {
+  const [slide, setSlide] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSlide((prev) => (prev === sliderImages.length - 1 ? 0 : prev + 1));
+    }, 2000);
+
+    return () => clearInterval(interval);
+  });
+
   return (
     <>
-      <section className="mt-[-128px] mb-16 relative h-[100vh] w-full flex items-center justify-center">
-        <Image src="/hero-image.png" alt="Hero Image" fill className="z-1" />
-        <h1 className="text-white text-9xl font-bold z-20">H&H POWER</h1>
+      <section className="mt-[-128px] mb-16 flex overflow-hidden">
+        {sliderImages.map((el, index) => (
+          <motion.div
+            key={index}
+            initial={{ x: `${slide * 100}%` }}
+            animate={{ x: `-${slide * 100}%` }}
+            transition={{ duration: 1 }}
+            className="relative h-[100vh] w-[100vw] flex-shrink-0"
+          >
+            <Image
+              src={el}
+              alt="Slider Images"
+              fill
+              className="z-1 rounded-[0_0_150px_150px]"
+            />
+          </motion.div>
+        ))}
+
+        <h1 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-nowrap text-white text-5xl font-bold z-10 text-center">
+          H&H POWER MEP <br /> ENGINEERING ASSOCIATES
+        </h1>
       </section>
 
       <div className="px-3 max-w-[1200px] mx-auto">
@@ -69,7 +107,7 @@ const RootPage = () => {
             </h2>
           </div>
 
-          <div className="flex flex-wrap gap-6 justify-between">
+          <div className="flex flex-wrap gap-y-6 gap-x-24 justify-center">
             {industries.map((el, index) => (
               <div key={index} className="w-[300px] text-center">
                 <div className="h-32 flex items-end justify-center mb-2">
@@ -133,11 +171,11 @@ const RootPage = () => {
             </p>
           </div>
 
-          <div className="flex flex-wrap gap-8 justify-between">
+          <div className="flex flex-wrap gap-x-8 gap-y-16 justify-between mb-28">
             {followOur?.map((el, index) => (
-              <div key={index} className="w-[40%]">
-                <div className="mb-4">
-                  <Image src={el.img} alt={el.text} width={450} height={350} />
+              <div key={index} className="w-[30%]">
+                <div className="mb-4 h-[250px] w-[300px] relative">
+                  <Image src={el.img} alt={el.text} fill />
                 </div>
                 <div className="flex justify-between items-center text-[#292F36] font-semibold text-2xl">
                   <p>{el.text}</p>
@@ -152,6 +190,23 @@ const RootPage = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div>
+            <h2 className="text-[#363B41] text-4xl font-bold mb-3 text-center">
+              Clients
+            </h2>
+            <div className="flex gap-8 flex-wrap items-center justify-between">
+              {clients.map((el, index) => (
+                <Image
+                  src={el}
+                  alt="Clients"
+                  key={index}
+                  width={100}
+                  height={50}
+                />
+              ))}
+            </div>
           </div>
         </section>
       </div>

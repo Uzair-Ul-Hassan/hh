@@ -1,6 +1,13 @@
 import { mepServices2 } from "@/constants";
 import Image from "next/image";
 
+export const metadata = {
+  title: "Extra Low Voltage Services",
+  description: `Extra low voltage (ELV) engineering is the design, installation,
+  and maintenance of systems that operate at voltages of 50
+  volts or less. `,
+};
+
 const ExtraLowVoltagePage = () => {
   return (
     <>

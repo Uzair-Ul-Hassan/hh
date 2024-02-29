@@ -1,5 +1,14 @@
 import Image from "next/image";
 
+export const metadata = {
+  title: "Smart Home Automation",
+  description: `H&H aims to ﬁll the void of smart automation in their customer lives.
+  We offer smart retroﬁt solutions which bring efﬁciency, security,
+  accessibility and affordability. In combination with those beneﬁts, we
+  bring comfort, convenience and luxury to every home, corporate ofﬁce
+  or hospitality, be it a new or pre-constructed building.`,
+};
+
 const SmarthomePage = () => {
   return (
     <>

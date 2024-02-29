@@ -6,6 +6,40 @@ export const navItems = [
   {
     text: "Services",
     link: "/services",
+    subItems: [
+      {
+        text: "Mep Services",
+        link: "/mep",
+      },
+      {
+        text: "Wall Partition",
+        link: "/partition-system",
+      },
+      {
+        text: "Electrial",
+        link: "/electrical",
+      },
+      {
+        text: "ELV",
+        link: "/extra-low-voltage",
+      },
+      {
+        text: "HVAC",
+        link: "/hvac",
+      },
+      {
+        text: "Plumbing",
+        link: "/plumbing",
+      },
+      {
+        text: "Fire Fighting",
+        link: "/fire-fighting",
+      },
+      {
+        text: "Products",
+        link: "/products",
+      },
+    ],
   },
   {
     text: "Smart Homes",
@@ -14,6 +48,16 @@ export const navItems = [
   {
     text: "About Us",
     link: "/about",
+    subItems: [
+      {
+        text: "Our Projects",
+        link: "/mep",
+      },
+      {
+        text: "Testimonials",
+        link: "/testimonials",
+      },
+    ],
   },
   {
     text: "Careers",
@@ -88,19 +132,19 @@ export const footerItems = [
 
 export const stats = [
   {
-    number: 12,
+    number: "12+",
     text: "Years of Experience",
   },
   {
-    number: 85,
+    number: "85+",
     text: "Projects Completed",
   },
   {
-    number: 15,
+    number: "15+",
     text: "Active Projects",
   },
   {
-    number: 95,
+    number: "95+",
     text: "Happy Customers",
   },
 ];
@@ -136,12 +180,17 @@ export const industries = [
     img: "/industry6.png",
     text: "Hospitals Medical Centre's Pharmaceutical",
   },
+  {
+    heading: "Industrial",
+    img: "/industries.svg",
+    text: "Chemical, Pharmaceutical, Automobile, Cement, Power etc.",
+  },
 ];
 
 export const howWeWork = [
   "Planning & Scheduling ",
   "Execution of all MEP services",
-  "Monitoring and Controlling",
+  "Monitoring and PMC Controlling",
   "Testing & Commissioning",
   "Handover submission",
   "Preparation and submission",
@@ -164,23 +213,21 @@ export const followOur = [
     img: "/followour4.png",
     text: "Fire Fighting",
   },
+  {
+    img: "/followour.jpg",
+    text: "HVAC",
+  },
+  {
+    img: "/followour6.jpeg",
+    text: "Automation",
+  },
 ];
 
 export const mepServices = [
   {
-    heading: "PUF PANEL",
-    text: "PUF or polyurethane foam panels are one of the most widely used sandwich panels in prefabricated construction technology.",
-    path: "/partition-system",
-  },
-  {
     heading: "Electrical",
     text: "MEP engineers design and install electrical systems in a building, including power distribution, lighting, and communication systems.",
     path: "/electrical",
-  },
-  {
-    heading: "Extra Low Voltage Engineering Services",
-    text: "Fire Detection and Fire Alarm System. • CCTV Surveillance & Security System. • Access Control System.",
-    path: "/extra-low-voltage",
   },
   {
     heading: "HVAC",
@@ -188,14 +235,24 @@ export const mepServices = [
     path: "/hvac",
   },
   {
+    heading: "Fire Fighting",
+    text: "A fire fighting system is an activity of prevention during a fire spread in building, home or warehouse with the use of proper fire safety equipment like extinguisher, hose reels, fire monitors, nozzles and hose pipes.",
+    path: "/fire-fighting",
+  },
+  {
+    heading: "Extra Low Voltage Engineering Services",
+    text: "Fire Detection and Fire Alarm System. • CCTV Surveillance & Security System. • Access Control System.",
+    path: "/extra-low-voltage",
+  },
+  {
     heading: "Plumbing (PHE)",
     text: "The PHE (plumbing) industry is a basic and substantial part of every developed economy to fulfill the need for clean water, and proper collection and transportation of wastes",
     path: "/plumbing",
   },
   {
-    heading: "Fire Fighting",
-    text: "A fire fighting system is an activity of prevention during a fire spread in building, home or warehouse with the use of proper fire safety equipment like extinguisher, hose reels, fire monitors, nozzles and hose pipes.",
-    path: "/fire-fighting",
+    heading: "PUF PANEL",
+    text: "PUF or polyurethane foam panels are one of the most widely used sandwich panels in prefabricated construction technology.",
+    path: "/partition-system",
   },
 ];
 
@@ -322,4 +379,25 @@ export const customers = [
     feedback:
       " HnH power  is super reliable, trustworthy, and does great work at reasonable rates. Their technicians are knowledgeable, kind, and professional! And they're very thorough!",
   },
+];
+
+export const sliderImages = [
+  "/hero-image.png",
+  "/sh1.png",
+  "/1.png",
+  "/2.png",
+  "/3.png",
+  "/4.jpg",
+];
+
+export const clients = [
+  "/client1.png",
+  "/client2.png",
+  "/client3.png",
+  "/client4.png",
+  "/client5.png",
+  "/client6.jpg",
+  "/client7.jpg",
+  "/client8.png",
+  "/client9.jpg",
 ];
